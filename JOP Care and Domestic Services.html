@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JOP Care and Domestic Services — Chester &amp; Flintshire</title>
+<meta name="description" content="Friendly, reliable home care, domestic help and social outings for clients in Chester and Flintshire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f3fb;--ink:#2a1a3a;--mute:#6f6180;--line:rgba(42,26,58,.14);
+  --acc:#7a35c9;--acc2:#b98be8;--pill:#2a1a3a;--pillink:#fff;--card:rgba(255,255,255,.6);
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d0814;--ink:#f1eaf8;--mute:#a595b8;--line:rgba(241,234,248,.13);
+  --acc:#b98be8;--acc2:#7a35c9;--pill:#f1eaf8;--pillink:#1a0f27;--card:rgba(255,255,255,.04)}}
+:root[data-theme="dark"]{
+  --bg:#0d0814;--ink:#f1eaf8;--mute:#a595b8;--line:rgba(241,234,248,.13);
+  --acc:#b98be8;--acc2:#7a35c9;--pill:#f1eaf8;--pillink:#1a0f27;--card:rgba(255,255,255,.04)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:70}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:22px;
+  padding:9px 10px 9px 20px;border:1px solid var(--line);border-radius:100px;background:var(--card);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);width:max-content;max-width:calc(100vw - 24px)}
+.logo{font-family:var(--serif);font-size:20px;white-space:nowrap}.logo i{color:var(--acc)}
+.links{display:flex;gap:20px;font-size:13px;color:var(--mute)}.links a:hover{color:var(--ink)}
+.pill{padding:9px 16px;border-radius:100px;background:var(--pill);color:var(--pillink);font-size:13px;font-weight:400;white-space:nowrap}
+@media(max-width:760px){.links{display:none}nav{gap:12px}}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:100px;font-size:15px;font-weight:400;transition:transform .5s var(--ease),box-shadow .5s}
+.btn.p{background:var(--acc);color:#fff}.btn.p:hover{box-shadow:0 0 50px 4px var(--acc2);transform:translateY(-2px)}
+.btn.g{border:1px solid var(--line)}.btn.g:hover{border-color:var(--acc);color:var(--acc)}
+
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5vw 9vh;overflow:hidden;isolation:isolate}
+.aurora{position:absolute;inset:-20%;z-index:-1;filter:blur(70px);opacity:.75}
+.aurora b{position:absolute;border-radius:50%}
+.aurora b:nth-child(1){width:55vw;height:55vw;left:0;top:5%;background:radial-gradient(circle,var(--acc2),transparent 65%);opacity:.5;animation:d1 22s ease-in-out infinite alternate}
+.aurora b:nth-child(2){width:42vw;height:42vw;right:0;top:25%;background:radial-gradient(circle,#e68bd0,transparent 65%);opacity:.35;animation:d2 28s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(12vw,8vh) scale(1.15)}}@keyframes d2{to{transform:translate(-14vw,-6vh) scale(.9)}}
+.heart{position:absolute;right:8vw;top:16vh;width:min(24vw,280px);z-index:-1;animation:fl 7s ease-in-out infinite alternate;opacity:.9}
+@keyframes fl{to{transform:translateY(-22px) rotate(4deg)}}
+@media(max-width:760px){.heart{width:44vw;right:-4vw;top:13vh}}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:14px;margin-bottom:3vh}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--acc)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(54px,13vw,210px);line-height:.9;letter-spacing:-.035em}
+h1 em,h2 em{color:var(--acc)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:6vh;flex-wrap:wrap}
+.hero-foot p{max-width:440px;color:var(--mute);font-size:clamp(15px,1.2vw,18px)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.rise{opacity:0;transform:translateY(26px);animation:up 1.2s var(--ease) forwards}
+.rise:nth-child(2){animation-delay:.12s}.rise:nth-child(3){animation-delay:.24s}.rise:nth-child(4){animation-delay:.36s}
+@keyframes up{to{opacity:1;transform:none}}
+
+.label{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:5vh}
+.statement{padding:20vh 5vw}
+.statement p{font-family:var(--serif);font-size:clamp(32px,6vw,96px);line-height:1.05;letter-spacing:-.02em;max-width:18em}
+.statement .acc{color:var(--acc);font-style:italic}
+
+.services{padding:12vh 5vw}
+.services h2,.price h2,.areas h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.4vw,84px);line-height:1;letter-spacing:-.02em;margin-bottom:7vh}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:18px;padding:30px;background:var(--card);transition:transform .6s var(--ease),border-color .4s}
+.card:hover{transform:translateY(-6px);border-color:var(--acc)}
+.card .n{font-family:var(--serif);font-size:56px;line-height:1;color:var(--acc)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,36px);margin:14px 0 8px;line-height:1.05}
+.card p{color:var(--mute);font-size:15px}
+
+.how{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;padding:12vh 5vw}
+.how h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,100px);line-height:.95;letter-spacing:-.03em;position:sticky;top:16vh;align-self:start}
+.steps{display:flex;flex-direction:column;gap:9vh}
+.step{border-left:1px solid var(--line);padding-left:clamp(20px,3vw,44px);position:relative}
+.step::before{content:"";position:absolute;left:-4px;top:12px;width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 18px var(--acc)}
+.step .big{font-family:var(--serif);font-size:clamp(64px,9vw,130px);line-height:.9;color:var(--acc);letter-spacing:-.04em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,42px);margin:10px 0 8px}
+.step p{color:var(--mute);max-width:440px}
+@media(max-width:860px){.how{grid-template-columns:1fr}.how h2{position:relative;top:0}}
+
+.price{padding:12vh 5vw}
+.row{display:grid;grid-template-columns:1.2fr 1.4fr .8fr;align-items:center;gap:3vw;padding:4.5vh 0;border-top:1px solid var(--line)}
+.row:last-of-type{border-bottom:1px solid var(--line)}
+.row h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,44px);line-height:1}
+.row p{color:var(--mute);font-size:15px}
+.row .amt{font-family:var(--serif);font-size:clamp(34px,5vw,72px);text-align:right;color:var(--acc);line-height:1}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:8px}.row .amt{text-align:left;order:-1}}
+.note{margin-top:4vh;color:var(--mute);font-size:14px}.note a{color:var(--acc);border-bottom:1px solid var(--acc2)}
+
+.areas{padding:12vh 5vw;border-top:1px solid var(--line)}
+.areas ul{list-style:none}
+.areas li{font-family:var(--serif);font-size:clamp(44px,8vw,124px);line-height:1.02;letter-spacing:-.03em;color:var(--mute);opacity:.55;transition:color .5s,transform .7s var(--ease),opacity .5s}
+.areas li:first-child{color:var(--ink);opacity:1}
+.areas li:hover{color:var(--acc);opacity:1;transform:translateX(16px)}
+
+.final{position:relative;min-height:90svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:16vh 5vw 10vh;overflow:hidden;isolation:isolate}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(56px,14vw,230px);line-height:.88;letter-spacing:-.045em}
+.final p{margin:4vh 0;color:var(--mute);max-width:460px}
+.tel{margin-top:4vh;font-family:var(--serif);font-size:clamp(28px,3.4vw,46px);transition:color .4s}.tel:hover{color:var(--acc)}
+footer{padding:5vh 5vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+footer a:hover{color:var(--ink)}
+.rv{opacity:0;transform:translateY(50px);filter:blur(10px);transition:all 1.2s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.rise,.rv{opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#top" class="logo">JOP <i>Care</i></a>
+  <div class="links"><a href="#services">Services</a><a href="#how">How it works</a><a href="#fees">Fees</a><a href="#areas">Areas</a></div>
+  <a class="pill" href="tel:+447713403433">Call now</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="aurora"><b></b><b></b></div>
+  <svg class="heart" viewBox="0 0 200 180" aria-hidden="true">
+    <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7b6f5"/><stop offset="1" stop-color="#7a35c9"/></linearGradient></defs>
+    <path d="M100 168C40 120 8 90 8 56 8 30 28 12 52 12c19 0 36 10 48 28C112 22 129 12 148 12c24 0 44 18 44 44 0 34-32 64-92 112z" fill="url(#hg)"/>
+  </svg>
+  <span class="eyebrow rise">Care &amp; domestic services · Chester &amp; Flintshire</span>
+  <h1 class="rise" aria-label="Care that feels like home.">Care that<br>feels like <em>home.</em></h1>
+  <div class="hero-foot">
+    <p class="rise">Friendly, reliable help around the home and out in the community — from tidy, cared-for spaces to social outings and companionship, all tailored to you.</p>
+    <div class="cta rise">
+      <a class="btn p" href="tel:+447713403433">Call +44 7713 403433 →</a>
+      <a class="btn g" href="https://wa.me/447713403433" target="_blank" rel="noopener">WhatsApp us</a>
+    </div>
+  </div>
+</header>
+
+<section class="statement">
+  <span class="label">( 01 — Who we are )</span>
+  <p class="rv">A little help makes every day easier. Whether you need a hand at home or a friendly face for the day, <span class="acc">we're here to care.</span></p>
+</section>
+
+<section class="services" id="services">
+  <span class="label">( 02 — Services )</span>
+  <h2>How we can<br><em>help you</em></h2>
+  <div class="grid">
+    <article class="card rv"><div class="n">01</div><h3>Personal care</h3><p>Gentle, dignified support with daily routines, so you can stay comfortable and independent at home.</p></article>
+    <article class="card rv"><div class="n">02</div><h3>Domestic cleaning</h3><p>Thorough, dependable cleaning, laundry and tidying to keep your home fresh and welcoming.</p></article>
+    <article class="card rv"><div class="n">03</div><h3>Social outings</h3><p>Days out in Chester city centre and beyond — shopping, cafés, sights and good company.</p></article>
+    <article class="card rv"><div class="n">04</div><h3>Companionship</h3><p>A friendly visit, a cuppa and a chat. Time together that brightens the day.</p></article>
+    <article class="card rv"><div class="n">05</div><h3>Meals &amp; shopping</h3><p>Meal preparation, grocery shopping and errands taken care of with a smile.</p></article>
+    <article class="card rv"><div class="n">06</div><h3>Appointments &amp; transport</h3><p>Reliable support getting to appointments and activities, safely and on time.</p></article>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <h2>Simple <em>to start.</em><br>Easy to <em>keep.</em></h2>
+  <div class="steps">
+    <div class="step rv"><div class="big">01</div><h3>Get in touch</h3><p>Give us a call or send a WhatsApp message. We'll have a relaxed chat about what you need.</p></div>
+    <div class="step rv"><div class="big">02</div><h3>Your care plan</h3><p>We agree the support, days and times that suit you and your family — no pressure, no jargon.</p></div>
+    <div class="step rv"><div class="big">03</div><h3>Support you can rely on</h3><p>A friendly, consistent carer who gets to know you and your routines.</p></div>
+  </div>
+</section>
+
+<section class="price" id="fees">
+  <span class="label">( 03 — Fees )</span>
+  <h2>Clear and<br><em>fair.</em></h2>
+  <div class="row rv"><h3>Initial consultation</h3><p>A no-obligation chat to understand your needs.</p><div class="amt">Free</div></div>
+  <div class="row rv"><h3>Care &amp; domestic visits</h3><p>Hourly rates, tailored to the support you need.</p><div class="amt">On request</div></div>
+  <div class="row rv"><h3>Social outings</h3><p>Half-day or full-day outings with a companion.</p><div class="amt">On request</div></div>
+  <p class="note">Questions about pricing? <a href="tel:+447713403433">Call +44 7713 403433</a> for a friendly quote.</p>
+</section>
+
+<section class="areas" id="areas">
+  <span class="label">( 04 — Areas covered )</span>
+  <ul><li>Chester</li><li>Flintshire</li><li>Deeside</li><li>Wirral borders</li></ul>
+</section>
+
+<section class="final">
+  <div class="aurora"><b></b><b></b></div>
+  <span class="label">( 05 — Say hello )</span>
+  <h2>Let's talk<br>about <em>you.</em></h2>
+  <p>The first step is a free, friendly conversation.</p>
+  <a class="btn p" href="tel:+447713403433">Call us today →</a>
+  <a class="tel" href="tel:+447713403433">+44 7713 403433</a>
+</section>
+
+<footer>
+  <span>© 2026 JOP Care and Domestic Services · Chester &amp; Flintshire</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
